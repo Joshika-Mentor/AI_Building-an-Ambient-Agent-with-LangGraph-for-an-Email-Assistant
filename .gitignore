@@ -1,0 +1,29 @@
+# Environment
+.env
+config/.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Google Auth
+token.json
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
