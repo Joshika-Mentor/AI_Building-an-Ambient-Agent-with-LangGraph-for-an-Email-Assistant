@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Email Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h1>AmbientAgent Dashboard</h1>
+                </div>
+                <div class="agent-status">
+                    <div class="status-indicator"></div>
+                    <span id="parsing-status">Agent Online (Processing CSV...)</span>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Top Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card work">
+                        <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="stat-info">
+                            <h3>Work</h3>
+                            <p id="stat-work">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card finance">
+                        <div class="stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <div class="stat-info">
+                            <h3>Finance</h3>
+                            <p id="stat-finance">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card personal">
+                        <div class="stat-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="stat-info">
+                            <h3>Personal</h3>
+                            <p id="stat-personal">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card other">
+                        <div class="stat-icon"><i class="fa-solid fa-box-archive"></i></div>
+                        <div class="stat-info">
+                            <h3>Other</h3>
+                            <p id="stat-other">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-split">
+                    <!-- Analytics & Testing Section -->
+                    <div class="analytics-section">
+                        <h2>Agent Actions Distribution</h2>
+                        <div class="chart-container">
+                            <canvas id="actionsChart"></canvas>
+                        </div>
+
+                        <!-- Manual Classification Form -->
+                        <div class="manual-test-card">
+                            <h2>Classify Email Manually</h2>
+                            <p>Test the LangGraph agent logic with a custom subject.</p>
+                            <div class="form-group">
+                                <input type="text" id="manual-subject"
+                                    placeholder="Enter email subject (e.g., 'meeting schedule')">
+                                <button id="btn-classify">Classify</button>
+                            </div>
+                            <div class="classification-result" id="classification-result" style="display: none;">
+                                <div class="result-cat" id="res-category"></div>
+                                <div class="result-act" id="res-action"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email List -->
+                    <div class="email-list-section">
+                        <h2>Recent Processed Emails (Live from Dataset)</h2>
+                        <div class="email-list" id="email-list">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js?v=2"></script>
+</body>
+
+</html>
