@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+venv/
+env/
+.venv/
+
+# Node
+node_modules/
+.next/
+out/
+.cache/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Databases & Cache
+*.db
+*.sqlite
+.pytest_cache/
+
+
+# SSL Certificates
+nginx/ssl/*.pem
+nginx/ssl/*.key
+nginx/ssl/*.crt
+
+# Uploads & Models
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/app/ml/models/*.pkl
+backend/app/ml/models/*.joblib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# Logs
+*.log
