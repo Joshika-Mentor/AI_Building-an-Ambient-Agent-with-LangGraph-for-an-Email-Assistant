@@ -1,0 +1,136 @@
+{
+  "version": "v1_20260713_140525",
+  "description": "Initial training on synthetic PE malware dataset (1750 samples)",
+  "saved_at": "2026-07-13T14:05:25.041853+00:00",
+  "model_filename": "model_v1_20260713_140525.joblib",
+  "training_metadata": {
+    "n_samples": 1400,
+    "n_features": 33,
+    "n_classes": 7,
+    "classes": [
+      "Clean",
+      "Adware",
+      "Trojan",
+      "Ransomware",
+      "Worm",
+      "Spyware",
+      "Backdoor"
+    ],
+    "cv_folds": 5,
+    "cv_accuracy_mean": 0.9707,
+    "cv_accuracy_std": 0.0094,
+    "cv_scores": [
+      0.9786,
+      0.9679,
+      0.975,
+      0.9786,
+      0.9536
+    ],
+    "oob_score": 0.9729,
+    "training_time_seconds": 4.91,
+    "top_features": [
+      {
+        "name": "static_risk_score",
+        "importance": 0.1185
+      },
+      {
+        "name": "has_keylogger_apis",
+        "importance": 0.0898
+      },
+      {
+        "name": "suspicious_api_count",
+        "importance": 0.0709
+      },
+      {
+        "name": "suspicious_string_count",
+        "importance": 0.0648
+      },
+      {
+        "name": "entry_point",
+        "importance": 0.0611
+      },
+      {
+        "name": "url_count",
+        "importance": 0.0587
+      },
+      {
+        "name": "ip_count",
+        "importance": 0.0529
+      },
+      {
+        "name": "num_high_entropy_sections",
+        "importance": 0.0451
+      },
+      {
+        "name": "image_base",
+        "importance": 0.0409
+      },
+      {
+        "name": "behavioral_indicator_count",
+        "importance": 0.0399
+      }
+    ]
+  },
+  "feature_importances": [
+    {
+      "name": "static_risk_score",
+      "importance": 0.1185
+    },
+    {
+      "name": "has_keylogger_apis",
+      "importance": 0.0898
+    },
+    {
+      "name": "suspicious_api_count",
+      "importance": 0.0709
+    },
+    {
+      "name": "suspicious_string_count",
+      "importance": 0.0648
+    },
+    {
+      "name": "entry_point",
+      "importance": 0.0611
+    },
+    {
+      "name": "url_count",
+      "importance": 0.0587
+    },
+    {
+      "name": "ip_count",
+      "importance": 0.0529
+    },
+    {
+      "name": "num_high_entropy_sections",
+      "importance": 0.0451
+    },
+    {
+      "name": "image_base",
+      "importance": 0.0409
+    },
+    {
+      "name": "behavioral_indicator_count",
+      "importance": 0.0399
+    },
+    {
+      "name": "yara_match_count",
+      "importance": 0.0362
+    },
+    {
+      "name": "avg_entropy",
+      "importance": 0.0353
+    },
+    {
+      "name": "number_of_sections",
+      "importance": 0.0341
+    },
+    {
+      "name": "entropy_std",
+      "importance": 0.0294
+    },
+    {
+      "name": "avg_virtual_to_raw_ratio",
+      "importance": 0.0286
+    }
+  ]
+}
